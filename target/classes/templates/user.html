@@ -1,0 +1,52 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>User</title>
+    <link href="../static/css/index.css" th:href="@{/css/index.css}" rel="stylesheet" />
+</head>
+<body>
+<div id="help-exit">
+    <a href="help.html">Справка</a>
+    <a href="index.html">Выход</a>
+</div>
+<div id="main">
+    <form method="POST" enctype="multipart/form-data" action="/user">
+        <input type="file" name="file">
+
+        <h4>Настройка параметров запуска программы</h4>
+        <table>
+            <tr>
+                <td style="width: 250px;">
+                        <p><b>Типы узлов:</b></p>
+                        <p><input type="checkbox" name="typenode" value="Orange Pi Win Plus" checked>Orange Pi Win Plus<Br>
+                            <input type="checkbox" name="typenode" value="Orange Pi Prime">Orange Pi Prime<Br>
+                            <input type="checkbox" name="typenode" value="Orange Pi PC2">Orange Pi PC2</p>
+                </td>
+                <td>
+                    <table id="settingTeble">
+                        <tr>
+                            <td>Кол-во узлов:</td>
+                            <td>
+                                <input style="width: 50px;" type="text" name="node" id="node"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Кол-во процессов:</td>
+                            <td>
+                                <input style="width: 50px;" type="text" name="process" id="process">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Запуск программы"/>
+    </form>
+        <table>
+            <tr>
+                <td><button>Загрузить результаты</button></td>
+                <td><button>Просмотр состояния кластера</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

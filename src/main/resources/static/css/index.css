@@ -1,0 +1,21 @@
+#enterButton {
+	margin-left: 62px;
+    width: 166px;
+}
+
+#help {
+	margin-left: 95%;
+}
+
+#help-exit {
+	margin-left: 90%;
+}
+
+#main {
+	border: 3px dashed black;
+    padding: 20px 20px 5px;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
